@@ -8,14 +8,20 @@ public class playerMovement : MonoBehaviour
     public float speed;
     public float maxBound, minBound;
 
+    public GameObject shot;
+    public Transform shotSpawn;
+    public float fireRate;
+
+    private float nextFire;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponent <Transform>();
+        player = GetComponent<Transform>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float h = Input.GetAxisRaw("Horizontal"); // A/D or Arrow keys.
 
@@ -25,7 +31,19 @@ public class playerMovement : MonoBehaviour
             h = 0;
 
         player.position += Vector3.right * h * speed;
-        
+
 
     }
+
+    private void Update()
+    {
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+
+        }
+
+    }
+
 }

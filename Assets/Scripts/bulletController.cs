@@ -19,7 +19,7 @@ public class bulletController : MonoBehaviour
     {
         bullet.position += Vector3.up * speed; //Upward directions.
 
-        if (bullet.position.y >= 5.3)
+        if (bullet.position.y >= 5.5)
             Destroy(gameObject); //Destroys bullet off screen.
                 
     }
