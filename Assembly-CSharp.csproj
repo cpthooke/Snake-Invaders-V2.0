@@ -63,7 +63,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\RestartLevel.cs" />
+    <Compile Include="Assets\Scripts\baseDefeat.cs" />
+    <Compile Include="Assets\Scripts\baseHealth.cs" />
     <Compile Include="Assets\Scripts\bulletController.cs" />
+    <Compile Include="Assets\Scripts\gameOver.cs" />
     <Compile Include="Assets\Scripts\playerMovement.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
