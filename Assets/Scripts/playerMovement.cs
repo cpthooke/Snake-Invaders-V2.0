@@ -40,6 +40,7 @@ public class playerMovement : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
+            shotSpawn.position += new Vector3(0, 1, 0);
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 
         }
